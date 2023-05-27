@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+$couleurText : darken(white, 15%);
+
+body{
+    background-color: black;
+    color: $couleurText;
+    h1 {
+        color: red;
+    }
+}
