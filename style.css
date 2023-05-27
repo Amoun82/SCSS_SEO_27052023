@@ -2,10 +2,27 @@
   box-sizing: border-box;
 }
 
+body h3, body h2, body h1 {
+  border: 1px solid #d9d9d9;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px;
+  color: red;
+}
+body h3::first-letter, body h2::first-letter, body h1::first-letter {
+  text-transform: uppercase;
+}
+body h3:hover, body h2:hover, body h1:hover {
+  background-color: #404040;
+}
+
 body {
   background-color: black;
   color: #d9d9d9;
 }
-body h1 {
-  color: red;
+body h2 {
+  color: #806c00;
+}
+body h3 {
+  color: #805300;
 }/*# sourceMappingURL=style.css.map */

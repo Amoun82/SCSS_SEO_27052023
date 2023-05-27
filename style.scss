@@ -3,11 +3,40 @@
 }
 
 $couleurText : darken(white, 15%);
+$couleurTitre : red ;
+$couleurFond : black ;
+
+@function dark($color) {
+    @return darken($color , 25%) ;
+}
+
+%titre {
+    border: 1px solid $couleurText ;
+    width: max-content;
+    padding: 5px ;
+    color: $couleurTitre;
+    &::first-letter{
+        text-transform: uppercase;
+    }
+    &:hover{
+        background-color: lighten($couleurFond, 25%);
+    }
+}
 
 body{
-    background-color: black;
+    background-color: $couleurFond;
     color: $couleurText;
     h1 {
-        color: red;
+        @extend %titre ;
+    }
+
+    h2 {
+        @extend %titre ;
+        color: dark(gold);
+    }
+
+    h3{
+        @extend %titre ;
+        color: dark(orange);
     }
 }
